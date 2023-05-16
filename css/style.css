@@ -1,0 +1,99 @@
+/*
+ With # 
+buttons: #ff9f1c,
+#ffbf69,
+text color- #ffffff,
+#cbf3f0,
+#2ec4b6
+navbar - #264653
+font-family: 'Lora', serif;
+font-family: 'Poppins', sans-serif;
+*/
+
+/* custom font */
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Poppins&display=swap");
+
+/* basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lora", serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+}
+header {
+  font-family: "Poppins", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* nav bar styles */
+
+nav ul li {
+  padding: 1%;
+}
+
+nav a {
+  padding: 10px;
+}
+
+nav a:visited {
+  background: #82958a;
+  color: rgb(24, 22, 22);
+}
+
+nav a:hover {
+  background-color: #cbf3f0;
+}
+
+nav a:active {
+  background: #87c6c1;
+}
+
+/* button styles */
+.btn {
+  padding: 1%;
+  background-color: #87c6c1;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  color: rgb(19, 17, 17);
+  cursor: pointer;
+  margin: 2%;
+}
+
+.btn a {
+  color: rgb(19, 17, 17);
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+/* table styles */
+
+table,
+th,
+tr,
+td {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+.contact-link {
+  display: block;
+  margin-bottom: 1%;
+}
