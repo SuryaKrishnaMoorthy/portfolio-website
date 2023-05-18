@@ -30,6 +30,8 @@ ROSE - rgb(255, 241, 238)
   --visited-text-color: rgb(24, 22, 22);
   --active-bg-color: #87c6c1;
   --lighter-black: grey;
+  --header-font-family: "Poppins", sans-serif;
+  --primary-font-family: "Lora", serif;
 }
 
 /* custom font */
@@ -43,14 +45,18 @@ ROSE - rgb(255, 241, 238)
 }
 
 body {
-  font-family: "Lora", serif;
+  font-family: var(--primary-font-family);
   font-weight: var(--base-font-weight);
   font-size: var(--base-font-size);
   line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .page-header {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--header-font-family);
   padding: 20px;
   display: flex;
   width: 100%;
@@ -100,6 +106,9 @@ a {
   text-align: center;
 }
 
+.home {
+  margin: auto 0;
+}
 .grid {
   display: grid;
   grid-gap: 20px;
@@ -155,7 +164,7 @@ td {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 5% 0;
+  margin-top: auto;
 }
 
 .page-footer__item:last-child {
@@ -167,7 +176,7 @@ td {
 .about {
   margin: 10%;
 }
-.download {
+.btn {
   display: inline-block;
   padding: 10px;
   background-color: var(--darkerPink);
@@ -194,6 +203,20 @@ td {
 
 .cloud-back {
   animation: cloud-move-reverse 34s infinite linear alternate;
+}
+
+/* Contact Page */
+
+.contact {
+  margin: 10%;
+}
+
+.contact__item {
+  margin: 5%;
+}
+
+.standard-label {
+  margin-right: 20px;
 }
 
 /* media queries */
