@@ -104,6 +104,17 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+
+.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.profile-img {
+  border-radius: 50%;
+}
+
 .title {
   text-align: center;
 }
@@ -282,6 +293,19 @@ td {
     margin: 20px;
   }
 
+  .profile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
   .grid {
     grid-gap: 10px;
     -ms-grid-columns: 1fr;
@@ -305,6 +329,19 @@ td {
   .navigation-list li {
     margin: 3px;
     font-size: 14px;
+  }
+
+  .profile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .grid {

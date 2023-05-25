@@ -109,6 +109,15 @@ a {
 .home {
   margin: auto 0;
 }
+
+.profile {
+  display: flex;
+}
+
+.profile-img {
+  border-radius: 50%;
+}
+
 .grid {
   display: grid;
   grid-gap: 20px;
@@ -241,6 +250,12 @@ td {
     margin: 20px;
   }
 
+  .profile {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .grid {
     grid-gap: 10px;
     grid-template-columns: 1fr;
@@ -264,7 +279,11 @@ td {
     margin: 3px;
     font-size: 14px;
   }
-
+  .profile {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .grid {
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr;
