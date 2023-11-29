@@ -130,6 +130,10 @@ a {
   padding: 10%;
 }
 
+.project-img {
+  width: 100%;
+}
+
 /* button styles */
 .btn {
   padding: 1%;
