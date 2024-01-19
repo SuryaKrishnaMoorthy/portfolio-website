@@ -29,7 +29,7 @@ ROSE - rgb(255, 241, 238)
   --visited-bg-color: #82958a;
   --visited-text-color: rgb(24, 22, 22);
   --active-bg-color: #87c6c1;
-  --lighter-black: grey;
+  --lighter-black: rgb(213, 211, 211);
   --header-font-family: "Poppins", sans-serif;
   --primary-font-family: "Urbanist", sans-serif;
 }
@@ -177,6 +177,9 @@ h3 {
 }
 
 /* table styles */
+table {
+  margin-right: 20px;
+}
 
 table,
 th,
