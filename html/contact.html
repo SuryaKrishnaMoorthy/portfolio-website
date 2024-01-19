@@ -22,7 +22,8 @@
       href="../assets/portfolio_favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="../assets/portfolio_favicon/site.webmanifest" />
-    <link rel="stylesheet" href="../css/style.production.css" />
+    <!-- <link rel="stylesheet" href="../css/style.production.css" /> -->
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Contact</title>
   </head>
   <body>
@@ -62,61 +63,68 @@
         </ul>
       </nav>
     </header>
+    <h1>Contact</h1>
     <main class="contact">
-      <h1 class="contact__item">Contact</h1>
       <section class="contact__item">
-        <h3>Surya Krishna Moorthy</h3>
+        <p>Surya Krishna Moorthy</p>
         <div>
-          <a class="contact-link" href="tel: +1 408 768 0549">
-            Phone: +14087680549</a
+          <span>Phone: </span>
+          <a class="contact-link" href="tel: +1 408 768 0549"> +14087680549</a>
+          <br />
+          <span>Email: </span
+          ><a class="contact-link" href="mailto:ayrus2289@gmail.com"
+            >ayrus2289@gmail.com</a
           >
-
-          <a class="contact-link" href="mailto:ayrus2289@gmail.com"
-            >Email: ayrus2289@gmail.com</a
-          >
-
+          <br />
+          <span>Skype: </span>
           <a class="contact-link" href="skype:live:.cid.ffa51b4399078d62"
-            >Skype: live:.cid.ffa51b4399078d62</a
+            >live:.cid.ffa51b4399078d62</a
           >
         </div>
-        <button class="btn">
-          <a href="mailto:ayrus2289@gmail.com">Contact me</a>
-        </button>
       </section>
+      <section class="contact__item">
+        <form class="contact__item" action="" method="post">
+          <h2 class="contact__item">Contact Form</h2>
+          <div class="contact-name" role="presentation">
+            <input type="text" placeholder="First Name" id="firstName" />
+            <input type="text" placeholder="Last Name" id="lastName" />
+          </div>
+          <div role="presentation">
+            <input placeholder="Email" type="email" id="email" />
+          </div>
 
-      <h2 class="contact__item">Contact Form</h2>
-      <form class="contact__item" action="" method="post">
-        <div role="presentation">
-          <label class="standard-label" for="email">Email:</label>
-          <input type="email" id="email" />
-        </div>
-        <div role="presentation">
-          <label class="standard-label" for="mobile">Mobile:</label>
-          <input type="tel" id="mobile" />
-        </div>
-        <div role="presentation">
-          <label class="standard-label" for="message">Message:</label>
-          <textarea required id="message" maxlength="240"></textarea>
-        </div>
-        <input class="btn" type="submit" value="Send message" />
-      </form>
+          <div role="presentation">
+            <textarea
+              required
+              id="message"
+              maxlength="240"
+              placeholder="Message..."
+            ></textarea>
+          </div>
+          <input class="btn" type="submit" value="Send message" />
+        </form>
+      </section>
     </main>
-    <footer>
-      <p>Find me on</p>
-      <div>
+    <footer class="page-footer">
+      <p class="page-footer__item">Find me on</p>
+      <div class="page-footer__item">
         <!-- LinkedIn Logo -->
-        <a href="https://www.linkedin.com/in/suryakrishnamoorthy/">
+        <a
+          class="social-media"
+          href="https://www.linkedin.com/in/suryakrishnamoorthy/"
+        >
           <img
             src="../assets/footer_icons/linkedin_logo_icon.svg"
             alt="linkedin"
           />
         </a>
         <!-- Github Logo -->
-        <a href="https://github.com/SuryaKrishnaMoorthy">
+        <a class="social-media" href="https://github.com/SuryaKrishnaMoorthy">
           <img src="../assets/footer_icons/github_logo_icon.svg" alt="github" />
         </a>
       </div>
     </footer>
+
     <script src="../js/tota11y.min.js"></script>
   </body>
 </html>
