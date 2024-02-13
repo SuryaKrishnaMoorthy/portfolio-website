@@ -22,12 +22,15 @@ BLUE - rgb(89,114,165)
 ROSE - rgb(255, 241, 238)
 */
 
+/* custom font */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Protest+Revolution&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
 :root {
   --primary-color: rgb(255, 241, 238);
   --secondary-color: rgb(89, 114, 165);
   --darkerPink: rgb(252, 141, 161);
   --page-header-item-width: 200px;
-  --base-font-size: 16px;
+  --base-font-size: 20px;
   --base-font-weight: 400;
   --btn-text-color: rgb(19, 17, 17);
   --sun-color-one: #edc655;
@@ -37,12 +40,9 @@ ROSE - rgb(255, 241, 238)
   --visited-text-color: rgb(24, 22, 22);
   --active-bg-color: #87c6c1;
   --lighter-black: rgb(213, 211, 211);
-  --header-font-family: "Poppins", sans-serif;
-  --primary-font-family: "Urbanist", sans-serif;
+  --header-font-family: "Quattrocento Sans", sans-serif;
+  --primary-font-family: "Source Sans 3", sans-serif;
 }
-
-/* custom font */
-@import url("https://fonts.googleapis.com/css2?family=Lora&family=Poppins&family=Urbanist&display=swap");
 
 /* basic reset */
 * {
@@ -77,7 +77,9 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  font-weight: 600;
   background-color: var(--primary-color);
+  font-style: normal;
 }
 
 .logo {
@@ -106,6 +108,10 @@ body {
   margin-right: 20px;
 }
 
+.navigation-list__item {
+  padding: 3px;
+}
+
 .navigation-list__item:visited {
   background-color: var(--visited-bg-color);
   color: var(--visited-text-color);
@@ -113,6 +119,8 @@ body {
 
 .navigation-list__item:hover {
   background-color: var(--darkerPink);
+  border-radius: 5px;
+  color: white;
 }
 
 .navigation-list__item:active {
@@ -144,9 +152,9 @@ a {
 .grid {
   display: -ms-grid;
   display: grid;
-  grid-gap: 20px;
-  -ms-grid-columns: 1fr 20px 1fr;
-  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2em;
+  -ms-grid-columns: 1fr 2em 1fr 2em 1fr;
+  grid-template-columns: repeat(3, 1fr);
   margin: 20px;
 }
 
@@ -159,24 +167,28 @@ a {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0;
+  /* padding: 0; */
+  /* max-width: 80%; */
 }
-h3 {
-  font-family: Arial, Helvetica, sans-serif;
-}
+
 .projects {
   margin: auto 10%;
 }
+
 .project {
   height: 100%;
+  -webkit-box-shadow: 0px 19px 38px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 19px 38px 0px rgba(0, 0, 0, 0.3);
 }
 
 .project-img-container {
   height: 50%;
+  padding: 0;
+  margin: 0;
 }
 
 .project-img {
-  height: 100%;
+  height: auto;
   width: 100%;
   -o-object-fit: contain;
   object-fit: contain;
@@ -256,7 +268,7 @@ td {
 /* About page */
 
 .about {
-  margin: 10%;
+  margin: 2% 10%;
 }
 .btn {
   display: inline-block;
@@ -271,13 +283,17 @@ td {
   transition: transform 0.4s;
   transition: transform 0.4s, -webkit-transform 0.4s;
 }
-
+.download {
+  margin-left: 0;
+}
 .download:hover {
   opacity: 0.8;
 }
+
 .about__item {
-  margin-bottom: 5%;
+  margin-bottom: 2%;
 }
+
 .skills {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -288,21 +304,6 @@ td {
 }
 .star {
   color: var(--secondary-color);
-}
-
-.sun {
-  -webkit-animation: color-change 4s infinite alternate linear;
-  animation: color-change 4s infinite alternate linear;
-}
-
-.cloud-front {
-  -webkit-animation: cloud-move 30s infinite linear alternate;
-  animation: cloud-move 30s infinite linear alternate;
-}
-
-.cloud-back {
-  -webkit-animation: cloud-move-reverse 34s infinite linear alternate;
-  animation: cloud-move-reverse 34s infinite linear alternate;
 }
 
 /* Contact Page */
@@ -479,72 +480,56 @@ td {
     -ms-grid-columns: 1fr 10px 1fr;
     grid-template-columns: 1fr 1fr;
   }
-}
+  .project-img-container {
+    height: auto;
+    padding: 0;
+    margin: 0;
+  }
 
-/* animations */
-@-webkit-keyframes color-change {
-  0% {
-    fill: var(--sun-color-one);
-  }
-  50% {
-    fill: var(--sun-color-two);
-  }
-  100% {
-    fill: var(--sun-color-three);
-  }
-}
-@keyframes color-change {
-  0% {
-    fill: var(--sun-color-one);
-  }
-  50% {
-    fill: var(--sun-color-two);
-  }
-  100% {
-    fill: var(--sun-color-three);
+  .project-details {
+    height: 80%;
+    padding: 5%;
+    overflow-y: auto;
   }
 }
 
-@-webkit-keyframes cloud-move {
-  from {
-    -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
+@media screen and (min-width: 768px) and (max-width: 900px) {
+  .project-img-container {
+    height: 20%;
+    padding: 0;
+    margin: 0;
   }
-  to {
-    -webkit-transform: translate(200px, 50px);
-    transform: translate(200px, 50px);
+
+  .project-details {
+    height: 80%;
+    padding: 5%;
+    overflow-y: auto;
   }
 }
 
-@keyframes cloud-move {
-  from {
-    -webkit-transform: translate(0, 50px);
-    transform: translate(0, 50px);
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+  .project-img-container {
+    height: 30%;
+    padding: 0;
+    margin: 0;
   }
-  to {
-    -webkit-transform: translate(200px, 50px);
-    transform: translate(200px, 50px);
+
+  .project-details {
+    height: 70%;
+    padding: 5%;
+    overflow-y: auto;
   }
 }
+@media screen and (min-width: 1200px) and (max-width: 1700px) {
+  .project-img-container {
+    height: 40%;
+    padding: 0;
+    margin: 0;
+  }
 
-@-webkit-keyframes cloud-move-reverse {
-  from {
-    -webkit-transform: translate(446px, 48px);
-    transform: translate(446px, 48px);
-  }
-  to {
-    -webkit-transform: translate(100px, 48px);
-    transform: translate(100px, 48px);
-  }
-}
-
-@keyframes cloud-move-reverse {
-  from {
-    -webkit-transform: translate(446px, 48px);
-    transform: translate(446px, 48px);
-  }
-  to {
-    -webkit-transform: translate(100px, 48px);
-    transform: translate(100px, 48px);
+  .project-details {
+    height: 60%;
+    padding: 5%;
+    overflow-y: auto;
   }
 }
